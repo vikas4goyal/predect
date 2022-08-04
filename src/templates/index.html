@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Handwriting Detector</title>
+</head>
+<body>
+<H1>Predect</H1>
+<p>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+</p>
+<form method="post" action="/" enctype="multipart/form-data">
+    <H4>Select a file:</H4>
+    <p><input type="file" name="file"></p>
+    <p><input type="submit" value="Submit"></p>
+    </br>
+</form>
+{% if filename %}
+<div>
+    <img style="height:30pt" src="{{ url_for('display_image', filename=filename) }}">
+</div>
+{% endif %}
+{% if result %}
+<h2>{{ result }}</h2>
+{% endif %}
+</body>
+</html>
