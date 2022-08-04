@@ -26,5 +26,5 @@ WARNING: This is a development server. Do not use it in a production deployment.
 select the input images, and the expected outputs are shown below 
 
 
-![test](./snapshot.png)
-![test](./snapshot2.png)
+![test](doc/snapshot.png)
+![test](doc/snapshot2.png)
